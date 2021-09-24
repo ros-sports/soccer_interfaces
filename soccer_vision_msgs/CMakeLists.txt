@@ -14,6 +14,9 @@ find_package(vision_msgs REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Ball.msg"
   "msg/Goalpost.msg"
+  "msg/MarkingEllipse.msg"
+  "msg/MarkingIntersection.msg"
+  "msg/MarkingSegment.msg"
   DEPENDENCIES vision_msgs
 )
 
