@@ -2,9 +2,6 @@
 # Note that curved segments can be approximated with a number of small segments, using
 # this msg.
 
-# A bounding box that surrounds the segment in the image.
-vision_msgs/BoundingBox2D bb
-
 # Two points defining the vector of the segment. The center is orthogonally in the middle of the segment
 # The points should be located at the centre along the width of the segment marking.
 geometry_msgs/Point start
