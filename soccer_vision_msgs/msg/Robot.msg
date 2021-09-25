@@ -6,6 +6,10 @@ uint8 TEAM_UNKNOWN=0
 uint8 TEAM_OWN=1
 uint8 TEAM_OPPONENT=2
 
+uint8 STATE_UKNOWN=0
+uint8 STATE_ON_FEET=1
+uint8 STATE_ON_GROUND=2
+
 # A bounding box that surrounds the obstacle in the image, this does not have to include
 # the whole obstacle, but only the part of the obstacle that was detected.
 vision_msgs/BoundingBox2D bb
@@ -17,6 +21,10 @@ uint8 player_number
 # Which team's robot it is. 
 # Value can be TEAM_UNKNOWN, TEAM_OWN or TEAM_OPPONENT
 uint8 team
+
+# State of the robot.
+# Value can be STATE_UNKNOWN, STATE_ON_FEET or STATE_ON_GROUND
+uint8 state
 
 # Whether the obstacle has a confidence value associated.
 bool has_confidence
