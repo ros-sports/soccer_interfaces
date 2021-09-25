@@ -13,7 +13,7 @@ find_package(vision_msgs REQUIRED)
 # generate interfaces
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Ball.msg"
-  "msg/Balls.msg"
+  "msg/BallArray.msg"
   "msg/Goalpost.msg"
   DEPENDENCIES vision_msgs
 )
