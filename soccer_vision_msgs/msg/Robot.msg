@@ -1,4 +1,4 @@
-# Describes a detected obstacle from vision modules, in image coordinates.
+# Describes a detected robot from vision modules, in image coordinates.
 
 uint8 NUMBER_UNKNOWN=0
 
