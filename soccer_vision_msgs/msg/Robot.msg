@@ -7,8 +7,10 @@ uint8 TEAM_OWN=1
 uint8 TEAM_OPPONENT=2
 
 uint8 STATE_UKNOWN=0
-uint8 STATE_ON_FEET=1
-uint8 STATE_ON_GROUND=2
+uint8 STATE_STANDING=1
+uint8 STATE_FALLEN=2
+uint8 STATE_KICKING=3
+uint8 STATE_INACTIVE=4
 
 # A bounding box that surrounds the obstacle in the image, this does not have to include
 # the whole obstacle, but only the part of the obstacle that was detected.
@@ -23,7 +25,7 @@ uint8 player_number
 uint8 team
 
 # State of the robot.
-# Value can be STATE_UNKNOWN, STATE_ON_FEET or STATE_ON_GROUND
+# Value can be one of the STATE_* constants defined in this msg
 uint8 state
 
 # Whether the obstacle has a confidence value associated.
