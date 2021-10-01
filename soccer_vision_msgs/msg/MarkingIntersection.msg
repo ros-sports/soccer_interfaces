@@ -7,10 +7,6 @@
 # - num_rays = 3
 # - heading_rays = [0, pi / 2, pi]
 
-# A bounding box that surrounds the intersection in the image, this only has to include
-# the parts where the markings are intersecting, and not the rays that extend out.
-vision_msgs/BoundingBox2D bb
-
 # Center point of the intersection, the z-axis should be ignored (in pixel)
 geometry_msgs/Point center
 
