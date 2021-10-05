@@ -10,8 +10,8 @@ uint8 TEAM_OPPONENT=2
 
 float32 CONFIDENCE_UNKNOWN=-1
 
-# A bounding box that surrounds the goalpost in the image,
-# this does not have to include the whole goalpost, but only the 
+# A bounding box that surrounds the goalpost in the image.
+# This does not have to include the whole goalpost, but only the 
 # part of the goalpost that was detected.
 vision_msgs/BoundingBox2D bb
 
