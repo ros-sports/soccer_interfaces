@@ -10,14 +10,17 @@ find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(vision_msgs REQUIRED)
 
+# generate interfaces
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Ball.msg"
   "msg/Goalpost.msg"
   DEPENDENCIES vision_msgs
 )
 
+# export dependencies
 ament_export_dependencies(rosidl_default_runtime)
 
+# test
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
