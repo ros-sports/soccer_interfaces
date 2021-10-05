@@ -18,8 +18,10 @@ uint8 FACING_AWAY=2
 uint8 FACING_LEFT=3
 uint8 FACING_RIGHT=4
 
-# A bounding box that surrounds the obstacle in the image, this does not have to include
-# the whole obstacle, but only the part of the obstacle that was detected.
+float32 CONFIDENCE_UNKNOWN=-1
+
+# A bounding box that surrounds the robot in the image, this does not have to include
+# the whole robot, but only the part of the robot that was detected.
 vision_msgs/BoundingBox2D bb
 
 # The number of the robot, if it can be read from the image.
@@ -38,11 +40,7 @@ uint8 state
 # Value can be one of the FACING_* constants defined in this msg
 uint8 facing
 
-# Whether the obstacle has a confidence value associated.
-bool has_confidence
-
-# NOTE: only used if has_confidence is true
-# A confidence rating between 0 and 1, used if has_confidence is true.
-# 0 - obstacle detection module is 0% sure it is an obstacle.
-# 1 - obstacle detection module is 100% sure it is an obstacle.
-float32 confidence
+# A confidence rating between 0 and 1, or -1(CONFIDENCE_UNKNOWN) by default.
+# 0 - robot detection module is 0% sure it is a robot.
+# 1 - robot detection module is 100% sure it is a robot.
+float32 confidence -1
