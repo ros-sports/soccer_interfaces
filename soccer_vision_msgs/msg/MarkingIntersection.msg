@@ -7,6 +7,8 @@
 # - num_rays = 3
 # - heading_rays = [0, pi / 2, pi]
 
+float32 CONFIDENCE_UNKNOWN=-1
+
 # Center point of the intersection, the z-axis should be ignored (in pixel)
 geometry_msgs/Point center
 
@@ -20,3 +22,8 @@ int32 num_rays
 # - have an interval of [0, 2pi)
 # - be stored in ascending order
 float64[] heading_rays
+
+# A confidence rating between 0 and 1, or -1(CONFIDENCE_UNKNOWN) by default.
+# 0 - intersection detection module is 0% sure it is a intersection.
+# 1 - intersection detection module is 100% sure it is a intersection.
+float32 confidence -1
