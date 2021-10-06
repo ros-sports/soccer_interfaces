@@ -1,5 +1,5 @@
 # Describes a detected marking intersection from vision modules, in image coordinates.
-# An intersection is defined as a point where two line markings intersect (L-, T- and X-intersections).
+# An intersection is defined as a point where two or more line markings intersect (L-, T- and X-intersections).
 # The term ray is used to describe the outgoing rays from the center of the
 # intersection.
 #
