@@ -4,7 +4,7 @@
 
 float32 CONFIDENCE_UNKNOWN=-1
 
-# Two points defining the vector of the segment. The center is orthogonally in the middle of the segment
+# Two points defining the ends of the segment.
 # The points should be located at the centre along the width of the segment marking.
 geometry_msgs/Point start
 geometry_msgs/Point end
