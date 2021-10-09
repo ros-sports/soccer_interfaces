@@ -5,3 +5,8 @@ This package provides messages for visually detected objects on a soccer field, 
 ## Messages (.msg)
 
 * Ball
+
+
+## Examples
+
+![](images/soccer_vision_msgs_visualized.png)
