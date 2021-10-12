@@ -16,7 +16,9 @@ geometry_msgs/Point center
 # 4 for an X-Junction
 int32 num_rays
 
-# NOTE: The length of this array should match num_rays.
+# NOTE: The length of the array should either:
+# - Match the number of rays specified with num_rays OR
+# - Be empty, if the headings are unknown
 # Heading is defined as 0 along the +x axis, and pi / 2 along the +y axis.
 # Headings should:
 # - have an interval of [0, 2pi)
