@@ -16,6 +16,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/BallArray.msg"
   "msg/FieldBoundary.msg"
   "msg/Goalpost.msg"
+  "msg/MarkingEllipse.msg"
+  "msg/MarkingIntersection.msg"
+  "msg/MarkingSegment.msg"
   "msg/Obstacle.msg"
   "msg/Robot.msg"
   DEPENDENCIES vision_msgs
