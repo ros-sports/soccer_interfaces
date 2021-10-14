@@ -9,6 +9,10 @@ This package provides messages for visually detected objects on a soccer field, 
 * FieldBoundary
 * Goalpost
 * GoalpostArray
+* MarkingEllipse
+* MarkingIntersection
+* MarkingSegment
+* MarkingArray
 * Obstacle
 * ObstacleArray
 * Robot
