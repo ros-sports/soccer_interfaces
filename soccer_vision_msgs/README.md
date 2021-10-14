@@ -5,7 +5,18 @@ This package provides messages for visually detected objects on a soccer field, 
 ## Messages (.msg)
 
 * Ball
-
+* BallArray
+* FieldBoundary
+* Goalpost
+* GoalpostArray
+* MarkingEllipse
+* MarkingIntersection
+* MarkingSegment
+* MarkingArray
+* Obstacle
+* ObstacleArray
+* Robot
+* RobotArray 
 
 ## Examples
 
