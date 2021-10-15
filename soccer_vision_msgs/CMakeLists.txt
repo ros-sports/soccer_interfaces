@@ -20,6 +20,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/MarkingEllipse.msg"
   "msg/MarkingIntersection.msg"
   "msg/MarkingSegment.msg"
+  "msg/MarkingArray.msg"
   "msg/Obstacle.msg"
   "msg/ObstacleArray.msg"
   "msg/Robot.msg"
