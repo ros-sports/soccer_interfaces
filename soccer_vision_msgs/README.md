@@ -23,3 +23,5 @@ This package provides messages for visually detected objects on a soccer field, 
 ![](images/soccer_vision_msgs_visualized.png)
 
 ![](images/obstacle_fieldboundary_markings_visualized.png)
+
+![](images/penalty_spots_and_more.png)
