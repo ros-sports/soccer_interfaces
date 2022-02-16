@@ -26,6 +26,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ros-tooling/setup-ros@v0.2
-      - uses: ros-tooling/action-ros-ci@80974bd48deac3726e28d7b5fc8a1176481479f5
+      - uses: ros-tooling/action-ros-ci@v0.2
         with:
           target-ros2-distro: rolling
