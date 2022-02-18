@@ -5,6 +5,8 @@
 
 float32 CONFIDENCE_UNKNOWN=-1
 
+std_msgs/Header header
+
 # The points along the field boundary detected in the image, are stored as a line strip.
 # You can think of the field boundary as a line between every two consecutive points,
 # so 0-1, 1-2, 2-3, 3-4, 4-5...
