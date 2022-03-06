@@ -2,11 +2,10 @@
 
 float32 CONFIDENCE_UNKNOWN=-1
 
-# A bounding box that surrounds the ball in the image, this does not have to include
-# the whole ball, but only the part of the ball that was detected.
-vision_msgs/BoundingBox2D bb
+# Diameter of the ball (in pixels)
+float32 diameter
 
-# Center point of the ball, the z-axis should be ignored (in pixel)
+# Center point of the ball, the z-axis should be ignored (in pixels)
 geometry_msgs/Point center
 
 # A confidence rating between 0 and 1, or -1(CONFIDENCE_UNKNOWN) by default.

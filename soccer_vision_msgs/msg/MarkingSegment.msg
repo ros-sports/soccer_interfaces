@@ -9,6 +9,11 @@ float32 CONFIDENCE_UNKNOWN=-1
 geometry_msgs/Point start
 geometry_msgs/Point end
 
+# Width of segment at the start and end points. The width is defined as the number of
+# pixels perpendicular to the segment, that the segment occupies.
+float32 start_width
+float32 end_width
+
 # A confidence rating between 0 and 1, or -1(CONFIDENCE_UNKNOWN) by default.
 # 0 - segment detection module is 0% sure it is a segment.
 # 1 - segment detection module is 100% sure it is a segment.
