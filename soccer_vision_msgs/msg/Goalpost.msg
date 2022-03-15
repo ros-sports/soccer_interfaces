@@ -10,7 +10,7 @@ uint8 TEAM_OPPONENT=2
 
 float32 CONFIDENCE_UNKNOWN=-1
 
-# A bounding box that surrounds the goalpost in the image, that can be rotate about its center.
+# A bounding box that surrounds the goalpost in the image, that can be rotated about its center.
 # This does not have to include the whole goalpost, but only the
 # part of the goalpost that was detected.
 # The rotation of the bounding box should be 0 when the goalpost appears upright in the image.
