@@ -10,19 +10,11 @@ uint8 TEAM_OPPONENT=2
 
 float32 CONFIDENCE_UNKNOWN=-1
 
-# A bounding box that surrounds the goalpost in the image.
-# This does not have to include the whole goalpost, but only the 
+# A bounding box that surrounds the goalpost in the image, that can be rotate about its center.
+# This does not have to include the whole goalpost, but only the
 # part of the goalpost that was detected.
+# The rotation of the bounding box should be 0 when the goalpost appears upright in the image.
 vision_msgs/BoundingBox2D bb
-
-# Top and bottom points defining the significant axis of the post.
-# The z-axis should be ignored.
-# The points should be located at the centre along the width of the post.
-geometry_msgs/Point top
-geometry_msgs/Point bottom
-
-# Orthogonal to significant vector (in pixel)
-float32 width
 
 # Whether the post is a left or right post, when looking INTO the goal.
 # Value can be SIDE_UNKNOWN, SIDE_LEFT or SIDE_RIGHT
