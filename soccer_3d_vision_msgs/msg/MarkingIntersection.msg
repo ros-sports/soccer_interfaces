@@ -3,8 +3,8 @@
 # The term ray is used to describe the outgoing rays from the center of the
 # intersection.
 
-# Center pose of the intersection
-geometry_msgs/Pose center 
+# Center point of the intersection
+geometry_msgs/Point center 
 
 # The number of rays outgoing from an intersection. This is 3 for a T-Junction and 
 # 4 for an X-Junction
