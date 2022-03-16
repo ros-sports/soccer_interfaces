@@ -3,8 +3,6 @@
 # outside the field of play. Field of play is a sports terminology.
 # Usually, this is where the field carpet ends, or meets a field border.
 
-float32 CONFIDENCE_UNKNOWN=-1
-
 std_msgs/Header header
 
 # The points along the field boundary detected in the image, are stored as a line strip.
@@ -12,7 +10,4 @@ std_msgs/Header header
 # so 0-1, 1-2, 2-3, 3-4, 4-5...
 vision_msgs/Point2D[] points # 2D points (in pixel)
 
-# A confidence rating between 0 and 1, or -1(CONFIDENCE_UNKNOWN) by default.
-# 0 - field boundary detection module is 0% sure it is a field boundary.
-# 1 - field boundary detection module is 100% sure it is a field boundary.
-float32 confidence -1
+soccer_vision_attribute_msgs/Confidence confidence
