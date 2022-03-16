@@ -7,10 +7,15 @@
 # - num_rays = 3
 # - heading_rays = [0, pi / 2, pi]
 
+<<<<<<< HEAD
 float32 CONFIDENCE_UNKNOWN=-1
 
 # Center point of the intersection, the z-axis should be ignored (in pixel)
 geometry_msgs/Point center
+=======
+# Center point of the intersection, in pixel coordinates
+vision_msgs/Point2D center
+>>>>>>> 874aab5 (add Markings and Obstacle to soccer_3d_vision_msgs)
 
 # The number of rays outgoing from an intersection. This is 3 for a T-Junction and 
 # 4 for an X-Junction
@@ -25,7 +30,4 @@ int32 num_rays
 # - be stored in ascending order
 float64[] heading_rays
 
-# A confidence rating between 0 and 1, or -1(CONFIDENCE_UNKNOWN) by default.
-# 0 - intersection detection module is 0% sure it is a intersection.
-# 1 - intersection detection module is 100% sure it is a intersection.
-float32 confidence -1
+soccer_vision_attribute_msgs/Confidence confidence
