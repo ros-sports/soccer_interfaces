@@ -22,6 +22,10 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/MarkingIntersection.msg"
   "msg/MarkingSegment.msg"
   "msg/MarkingArray.msg"
+  "msg/Obstacle.msg"
+  "msg/ObstacleArray.msg"
+  "msg/Robot.msg"
+  "msg/RobotArray.msg"
   DEPENDENCIES vision_msgs soccer_vision_attribute_msgs
 )
 
