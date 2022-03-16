@@ -26,7 +26,4 @@ uint8 side
 # Value can be TEAM_UNKNOWN, TEAM_OWN or TEAM_OPPONENT
 uint8 team
 
-# A confidence rating between 0 and 1, or -1(CONFIDENCE_UNKNOWN) by default.
-# 0 - goalpost detection module is 0% sure it is a goalpost.
-# 1 - goalpost detection module is 100% sure it is a goalpost.
-float32 confidence -1
+soccer_vision_attribute_msgs/Confidence confidence
