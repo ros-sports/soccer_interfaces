@@ -12,6 +12,7 @@ find_package(rosidl_default_generators REQUIRED)
 # generate interfaces
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Confidence.msg"
+  "msg/Goalpost.msg"
 )
 
 # export dependencies
