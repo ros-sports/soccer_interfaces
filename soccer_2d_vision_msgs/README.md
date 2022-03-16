@@ -1,4 +1,4 @@
-# soccer_vision_msgs
+# soccer_2d_vision_msgs
 
 This package provides messages for visually detected objects on a soccer field, such as balls, field lines and robots.
 
@@ -20,7 +20,7 @@ This package provides messages for visually detected objects on a soccer field, 
 
 ## Examples
 
-![](images/soccer_vision_msgs_visualized.png)
+![](images/soccer_2d_vision_msgs_visualized.png)
 
 ![](images/obstacle_fieldboundary_markings_visualized.png)
 

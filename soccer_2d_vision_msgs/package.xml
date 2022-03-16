@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>soccer_vision_msgs</name>
+  <name>soccer_2d_vision_msgs</name>
   <version>0.0.0</version>
   <description>A package containing some vision related message definitions in the soccer domain.</description>
   <maintainer email="kenjibrameld@gmail.com">ijnek</maintainer>
