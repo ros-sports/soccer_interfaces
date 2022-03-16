@@ -9,6 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(vision_msgs REQUIRED)
+find_package(soccer_vision_attribute_msgs REQUIRED)
 
 # generate interfaces
 rosidl_generate_interfaces(${PROJECT_NAME}
@@ -25,7 +26,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ObstacleArray.msg"
   "msg/Robot.msg"
   "msg/RobotArray.msg"
-  DEPENDENCIES vision_msgs
+  DEPENDENCIES vision_msgs soccer_vision_attribute_msgs
 )
 
 # export dependencies
