@@ -15,6 +15,7 @@ find_package(soccer_vision_attribute_msgs REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Ball.msg"
   "msg/BallArray.msg"
+  "msg/FieldBoundary.msg"
   "msg/Goalpost.msg"
   "msg/GoalpostArray.msg"
   DEPENDENCIES vision_msgs soccer_vision_attribute_msgs
