@@ -9,3 +9,5 @@ std_msgs/Header header
 # You can think of the field boundary as a line between every two consecutive points,
 # so 0-1, 1-2, 2-3, 3-4, 4-5...
 geometry_msgs/Point[] points
+
+soccer_vision_attribute_msgs/Confidence confidence
