@@ -6,8 +6,8 @@ float32 CONFIDENCE_UNKNOWN=-1
 
 # Two points defining the ends of the segment.
 # The points should be located at the centre along the width of the segment marking.
-geometry_msgs/Point start
-geometry_msgs/Point end
+vision_msgs/Point2D start
+vision_msgs/Point2D end
 
 # A confidence rating between 0 and 1, or -1(CONFIDENCE_UNKNOWN) by default.
 # 0 - segment detection module is 0% sure it is a segment.
