@@ -9,8 +9,8 @@
 
 float32 CONFIDENCE_UNKNOWN=-1
 
-# Center point of the intersection, the z-axis should be ignored (in pixel)
-geometry_msgs/Point center
+# Center point of the intersection, in pixel coordinates
+vision_msgs/Point2D center
 
 # The number of rays outgoing from an intersection. This is 3 for a T-Junction and 
 # 4 for an X-Junction
