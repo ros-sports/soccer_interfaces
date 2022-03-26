@@ -13,7 +13,6 @@ Only source installation is available. Run the following in your ROS workspace:
 
 ```
 git clone https://github.com/ros-sports/soccer_interfaces.git src/soccer_interfaces
-vcs import src < src/soccer_interfaces/dependencies.repos
 colcon build --allow-overriding vision_msgs
 ```
 
