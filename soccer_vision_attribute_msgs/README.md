@@ -5,6 +5,8 @@ This package provides messages for attributes of visually detected objects on a 
 ## Messages (.msg)
 
 * Confidence
+* Goalpost
+* Robot
 
 ## Examples
 
