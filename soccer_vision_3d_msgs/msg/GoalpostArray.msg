@@ -2,4 +2,4 @@
 # This msg type is used to publish all goalposts detected in 3d space.
 
 std_msgs/Header header
-soccer_3d_vision_msgs/Goalpost[] posts
+soccer_vision_3d_msgs/Goalpost[] posts

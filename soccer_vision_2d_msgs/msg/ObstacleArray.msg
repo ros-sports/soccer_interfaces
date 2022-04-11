@@ -2,4 +2,4 @@
 # This msg type is used to publish all obstacles detected in an image.
 
 std_msgs/Header header
-soccer_2d_vision_msgs/Obstacle[] obstacles
+soccer_vision_2d_msgs/Obstacle[] obstacles
