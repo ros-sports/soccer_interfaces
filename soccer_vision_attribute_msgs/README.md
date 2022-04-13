@@ -7,6 +7,3 @@ This package provides messages for attributes of visually detected objects on a 
 * Confidence
 * Goalpost
 * Robot
-
-## Examples
-

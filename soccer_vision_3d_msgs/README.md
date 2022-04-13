@@ -17,6 +17,3 @@ This package provides 3d messages for visually detected objects on a soccer fiel
 * ObstacleArray
 * Robot
 * RobotArray 
-
-## Examples
-
