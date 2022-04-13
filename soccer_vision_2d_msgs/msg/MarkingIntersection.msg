@@ -7,15 +7,8 @@
 # - num_rays = 3
 # - heading_rays = [0, pi / 2, pi]
 
-<<<<<<< HEAD
-float32 CONFIDENCE_UNKNOWN=-1
-
 # Center point of the intersection, the z-axis should be ignored (in pixel)
 geometry_msgs/Point center
-=======
-# Center point of the intersection, in pixel coordinates
-vision_msgs/Point2D center
->>>>>>> 874aab5 (add Markings and Obstacle to soccer_3d_vision_msgs)
 
 # The number of rays outgoing from an intersection. This is 3 for a T-Junction and 
 # 4 for an X-Junction

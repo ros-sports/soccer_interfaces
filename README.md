@@ -24,9 +24,6 @@ Only source installation is available. Run the following in your ROS workspace:
 ```
 git clone https://github.com/ros-sports/soccer_interfaces.git src/soccer_interfaces --branch galactic
 colcon build
-<<<<<<< HEAD
-```
-=======
 ```
 
 ## Overview
@@ -44,4 +41,3 @@ Provides 3d messages for visually detected objects on a soccer field, such as ba
 Messages for attributes for objects on a soccer field, such as balls, field markings and robots, that could be visually detected.
 Such attributes can be defined separatly in ``soccer_vision_2d_msgs`` and ``soccer_vision_3d_msgs``, but due to large overlap in information, this package aims to abstract out the attributes that aren't specific to 2d/3d vision.
 ``soccer_vision_2d_msgs`` and ``soccer_vision_3d_msgs`` depends on this package.
->>>>>>> a1b7b2b (add overrview to readme)
