@@ -2,4 +2,4 @@
 # This msg type is used to publish all balls detected in an image.
 
 std_msgs/Header header
-soccer_vision_3d_msgs/Ball[]  balls
+soccer_vision_3d_msgs/Ball[] balls
