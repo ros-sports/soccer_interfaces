@@ -1,6 +1,6 @@
 # soccer_vision_2d_msgs
 
-This package provides 2d messages for visually detected objects on a soccer field, such as balls, field lines and robots.
+This package provides 2d messages for visually detected objects on a soccer field, such as balls, field markings and robots.
 
 ## Messages (.msg)
 
