@@ -6,8 +6,6 @@ Such attributes can be defined separatly in ``soccer_vision_2d_msgs`` and ``socc
 
 ``soccer_vision_2d_msgs`` and ``soccer_vision_3d_msgs`` should depend on this package.
 
-## Messages (.msg)
+## Documentation
 
-* Confidence
-* Goalpost
-* Robot
+For documentation, see [Soccer Vision Attribute Msgs](https://soccer-interfaces.readthedocs.io/en/latest/soccer_vision_attribute_msgs.html).

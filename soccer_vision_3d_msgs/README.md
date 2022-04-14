@@ -2,18 +2,6 @@
 
 This package provides 3d messages for visually detected objects on a soccer field, such as balls, field markings and robots
 
-## Messages (.msg)
+## Documentation
 
-* Ball
-* BallArray
-* FieldBoundary
-* Goalpost
-* GoalpostArray
-* MarkingEllipse
-* MarkingIntersection
-* MarkingSegment
-* MarkingArray
-* Obstacle
-* ObstacleArray
-* Robot
-* RobotArray 
+For documentation, see [Soccer Vision 3D Msgs](https://soccer-interfaces.readthedocs.io/en/latest/soccer_vision_3d_msgs.html).
