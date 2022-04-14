@@ -27,4 +27,4 @@ colcon build
 
 ## Documentation
 
-For documentation, see [Soccer Interfaces](https://soccer-interfaces.readthedocs.io/en/.latest/).
+For documentation, see [Soccer Interfaces](https://soccer-interfaces.readthedocs.io/en/latest/).
