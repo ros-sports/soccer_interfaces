@@ -25,18 +25,6 @@ git clone https://github.com/ros-sports/soccer_interfaces.git src/soccer_interfa
 colcon build
 ```
 
-## Overview
+## Documentation
 
-**soccer_vision_2d_msgs**
-
-Provides 2d messages for visually detected objects on a soccer field, such as balls, field markings and robots.
-
-**soccer_vision_3d_msgs**
-
-Provides 3d messages for visually detected objects on a soccer field, such as balls, field markings and robots
-
-**soccer_vision_attribute_msgs**
-
-Messages for attributes for objects on a soccer field, such as balls, field markings and robots, that could be visually detected.
-Such attributes can be defined separatly in ``soccer_vision_2d_msgs`` and ``soccer_vision_3d_msgs``, but due to large overlap in information, this package aims to abstract out the attributes that aren't specific to 2d/3d vision.
-``soccer_vision_2d_msgs`` and ``soccer_vision_3d_msgs`` depends on this package.
+For documentation, see [Soccer Interfaces](https://soccer-interfaces.readthedocs.io/en/.latest/).
