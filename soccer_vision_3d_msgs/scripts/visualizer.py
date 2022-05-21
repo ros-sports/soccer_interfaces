@@ -5,9 +5,9 @@ import time
 from rclpy.node import Node
 from rclpy.duration import Duration
 
-from geometry_msgs.msg import Pose, Vector3, Quaternion
+from geometry_msgs.msg import Vector3
 from std_msgs.msg import ColorRGBA
-from visualization_msgs.msg import MarkerArray, Marker
+from visualization_msgs.msg import Marker
 from soccer_vision_3d_msgs.msg import BallArray, FieldBoundary, GoalpostArray, RobotArray
 from soccer_vision_attribute_msgs.msg import Confidence, Robot as RobotAttribute
 
@@ -21,18 +21,12 @@ class SoccerVision3DMsgs2Rviz(Node):
         # Create publishers
         self.marker_publisher = self.create_publisher(Marker, "soccer_vision_3d_msgs", 1)
 
-        # object default properties
+        # Settings
         self.ball_diameter = 0.13
         self.ball_lifetime = int(5e9)
-        self.post_diameter = 0.10
-        self.post_height = 1.10
         self.goal_lifetime = int(5e9)
-        self.obstacle_height = 1.0
         self.obstacle_lifetime = int(5e9)
         self.robot_lifetime = int(5e9)
-        self.obstacle_def_width = 0.3
-
-        # Initilization
 
         # Ball
         self.marker_ball = Marker()
@@ -44,14 +38,13 @@ class SoccerVision3DMsgs2Rviz(Node):
         self.marker_ball.color = ColorRGBA(r=1.0, a=1.0)
         self.marker_ball.lifetime = Duration(nanoseconds=self.ball_lifetime).to_msg()
 
-
         # Goalpost
         self.marker_goalpost = Marker()
         self.marker_goalpost.ns = "rel_goal"
         self.marker_goalpost.id = 0
         self.marker_goalpost.type = Marker.CYLINDER
         self.marker_goalpost.action = Marker.MODIFY
-        self.marker_goalpost.scale = Vector3(x=self.post_diameter, y=self.post_diameter, z=self.post_height)
+        self.marker_goalpost.scale = Vector3()
         self.marker_goalpost.color = ColorRGBA(r=1.0, g=1.0, b=1.0, a=1.0)
         self.marker_goalpost.lifetime = Duration(nanoseconds=self.goal_lifetime).to_msg()
 
@@ -59,14 +52,24 @@ class SoccerVision3DMsgs2Rviz(Node):
         self.marker_robot = Marker()
         self.marker_robot.lifetime = Duration(nanoseconds=self.robot_lifetime).to_msg()
         self.marker_robot.ns = "rel_robot"
+        self.marker_robot.action = Marker.MODIFY
         self.marker_robot.color = ColorRGBA(a=1.0)
-        self.obstacle_pose = Pose()
-        self.obstacle_pose.orientation.w = 1.0
         self.marker_robot.type = Marker.CUBE
+
+        # Field Boundary
+        self.field_boundary = Marker()
+        self.field_boundary.lifetime = Duration(nanoseconds=self.robot_lifetime).to_msg()
+        self.field_boundary.ns = "rel_field_boundary"
+        self.field_boundary.color = ColorRGBA(g=1.0, a=1.0)
+        self.field_boundary.type = Marker.LINE_STRIP
+        self.field_boundary.action = Marker.MODIFY
+        self.field_boundary.lifetime = Duration(nanoseconds=self.goal_lifetime).to_msg()
+        self.field_boundary.scale = Vector3(x=0.02)
 
         self.create_subscription(BallArray, "balls_relative", self.balls_cb, 10)
         self.create_subscription(GoalpostArray, "goal_posts_relative", self.goalpost_cb, 10)
         self.create_subscription(RobotArray, "robots_relative", self.robot_cb, 10)
+        self.create_subscription(FieldBoundary, "field_boundary_relative", self.field_boundary_cb, 10)
 
     def conf_to_alpha(self, conf: Confidence):
         if conf.confidence == Confidence.CONFIDENCE_UNKNOWN:
@@ -116,6 +119,11 @@ class SoccerVision3DMsgs2Rviz(Node):
             self.marker_robot.color.a = self.conf_to_alpha(robot.confidence)
             self.marker_robot.id = idx
             self.marker_publisher.publish(self.marker_robot)
+
+    def field_boundary_cb(self, msg: FieldBoundary):
+        self.field_boundary.header = msg.header
+        self.field_boundary.points = msg.points
+        self.marker_publisher.publish(self.field_boundary)
 
 
 if __name__ == "__main__":
