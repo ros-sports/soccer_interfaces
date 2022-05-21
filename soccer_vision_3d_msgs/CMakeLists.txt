@@ -32,6 +32,10 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 # export dependencies
 ament_export_dependencies(rosidl_default_runtime)
 
+install(PROGRAMS
+  scripts/visualizer.py
+  DESTINATION lib/${PROJECT_NAME} )
+
 # test
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
