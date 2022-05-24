@@ -12,7 +12,7 @@ from soccer_vision_3d_msgs.msg import BallArray, FieldBoundary, GoalpostArray, R
 from soccer_vision_attribute_msgs.msg import Confidence, Robot as RobotAttribute
 
 
-class SoccerVision3DMsgs2Rviz(Node):
+class SoccerVision3DMarkers(Node):
     """This node provides RViz markers coresponding to the recognized objects."""
 
     def __init__(self):
@@ -34,9 +34,13 @@ class SoccerVision3DMsgs2Rviz(Node):
         self.marker_ball.id = 0
         self.marker_ball.type = Marker.SPHERE
         self.marker_ball.action = Marker.MODIFY
-        self.marker_ball.scale = Vector3(** dict(zip("xyz", [self.ball_diameter] * 3)))
+        self.marker_ball.scale = Vector3(
+            x=self.ball_diameter,
+            y=self.ball_diameter,
+            z=self.ball_diameter)
         self.marker_ball.color = ColorRGBA(r=1.0, a=1.0)
         self.marker_ball.lifetime = Duration(nanoseconds=self.ball_lifetime).to_msg()
+        self.marker_ball.pose.orientation.w = 1.0
 
         # Goalpost
         self.marker_goalpost = Marker()
@@ -44,7 +48,6 @@ class SoccerVision3DMsgs2Rviz(Node):
         self.marker_goalpost.id = 0
         self.marker_goalpost.type = Marker.CYLINDER
         self.marker_goalpost.action = Marker.MODIFY
-        self.marker_goalpost.scale = Vector3()
         self.marker_goalpost.color = ColorRGBA(r=1.0, g=1.0, b=1.0, a=1.0)
         self.marker_goalpost.lifetime = Duration(nanoseconds=self.goal_lifetime).to_msg()
 
@@ -80,7 +83,6 @@ class SoccerVision3DMsgs2Rviz(Node):
         self.marker_ball.header = msg.header
         for idx, ball in enumerate(msg.balls):
             self.marker_ball.pose.position = ball.center
-            self.marker_ball.pose.orientation.w = 1.0
             self.marker_ball.color.a = self.conf_to_alpha(ball.confidence)
             self.marker_ball.id = idx
             self.marker_publisher.publish(self.marker_ball)
@@ -101,22 +103,16 @@ class SoccerVision3DMsgs2Rviz(Node):
             self.marker_robot.pose = robot.bb.center
             self.marker_robot.pose.position.z = robot.bb.center.position.z + robot.bb.size.z / 2
             self.marker_robot.scale = robot.bb.size
+            a = self.conf_to_alpha(robot.confidence)
             if robot.attributes.team == RobotAttribute.TEAM_OWN:
-                self.marker_robot.color.r = 0.0
-                self.marker_robot.color.g = 0.0
-                self.marker_robot.color.b = 1.0
+                self.marker_robot.color = ColorRGBA(b=1.0, a=a)
             elif robot.attributes.team == RobotAttribute.TEAM_OPPONENT:
-                self.marker_robot.color.r = 1.0
-                self.marker_robot.color.g = 0.0
-                self.marker_robot.color.b = 0.0
+                self.marker_robot.color = ColorRGBA(r=1.0, a=a)
             elif robot.attributes.team == RobotAttribute.TEAM_UNKNOWN:
-                self.marker_robot.color.r = 0.0
-                self.marker_robot.color.g = 1.0
-                self.marker_robot.color.b = 0.0
+                self.marker_robot.color = ColorRGBA(g=1.0, a=a)
             else:
                 self.get_logger().error(f"Unknown team {robot.attributes.team}")
                 return
-            self.marker_robot.color.a = self.conf_to_alpha(robot.confidence)
             self.marker_robot.id = idx
             self.marker_publisher.publish(self.marker_robot)
 
@@ -128,7 +124,7 @@ class SoccerVision3DMsgs2Rviz(Node):
 
 if __name__ == "__main__":
     rclpy.init()
-    node = SoccerVision3DMsgs2Rviz()
+    node = SoccerVision3DMarkers()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
