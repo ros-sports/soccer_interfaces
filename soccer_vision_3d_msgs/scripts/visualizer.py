@@ -16,7 +16,7 @@ class SoccerVision3DMarkers(Node):
     """This node provides RViz markers coresponding to the recognized objects."""
 
     def __init__(self):
-        super().__init__('SVM2DRviz')
+        super().__init__('SoccerVision3DMarkers')
 
         # Create publishers
         self.marker_publisher = self.create_publisher(Marker, "soccer_vision_3d_msgs", 1)
