@@ -1,6 +1,3 @@
-std_msgs/Header header
-geometry_msgs/PoseWithCovariance pose
+# Describes a filtered ball from modelling modules, in 3d coordinates.
+soccer_geometry_msgs/PointWithCovariance point
 geometry_msgs/TwistWithCovariance twist
-
-# The assumed radius of the ball (in mm)
-float32 radius
