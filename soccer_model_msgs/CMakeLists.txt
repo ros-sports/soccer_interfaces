@@ -23,6 +23,7 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
 # Generate Interfaces
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Ball.msg"
+  "msg/Obstacle.msg"
   "msg/Robot.msg"
   DEPENDENCIES ${THIS_PACKAGE_INCLUDE_DEPENDS})
 
