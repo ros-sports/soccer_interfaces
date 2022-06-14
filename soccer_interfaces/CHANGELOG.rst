@@ -2,8 +2,8 @@
 Changelog for package soccer_interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.0 (2022-06-14)
+------------------
 * add soccer_interfaces meta package
 * Contributors: Kenji Brameld
 
