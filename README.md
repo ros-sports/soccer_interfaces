@@ -8,25 +8,37 @@ A set of packages which contain common soccer interface files
 
 ## Installation
 
-### For ROS2 Rolling
+### ROS2 Rolling
 
-Only source installation is available. Run the following in your ROS workspace:
+Binary installation is available:
+
+```
+sudo apt install ros-rolling-soccer-interfaces
+```
+
+Alternatively to build from source, run the following in your ROS workspace:
 
 ```
 git clone https://github.com/ros-sports/soccer_interfaces.git src/soccer_interfaces
 colcon build
 ```
 
-### For ROS2 Humble
+### ROS2 Humble
 
-Only source installation is available. Run the following in your ROS workspace:
+Binary installation is available:
+
+```
+sudo apt install ros-humble-soccer-interfaces
+```
+
+Alternatively to build from source, run the following in your ROS workspace:
 
 ```
 git clone https://github.com/ros-sports/soccer_interfaces.git src/soccer_interfaces --branch humble
 colcon build
 ```
 
-### For ROS2 Foxy and Galactic
+### ROS2 Foxy and Galactic
 
 Only source installation is available. Run the following in your ROS workspace:
 
