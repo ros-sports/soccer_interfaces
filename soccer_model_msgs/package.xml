@@ -3,7 +3,7 @@
 <package format="3">
   <name>soccer_model_msgs</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>A package containing world model related message definitions in the soccer domain.</description>
   <maintainer email="kenjibrameld@gmail.com">ijnek</maintainer>
   <license>Apache License 2.0</license>
 
