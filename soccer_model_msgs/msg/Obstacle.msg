@@ -2,4 +2,4 @@
 # An Obstacle is defined as anything on the field that could not be classified as
 # one of the known types (such as Robot or Goalpost).
 
-geometry_msgs/PointWithCovariance point
+soccer_geometry_msgs/PointWithCovariance point
