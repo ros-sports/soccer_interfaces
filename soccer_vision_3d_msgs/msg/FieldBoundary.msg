@@ -2,6 +2,7 @@
 # The field boundary is defined as the line that separates the field of play, to
 # outside the field of play. Field of play is a sports terminology.
 # Usually, this is where the field carpet ends, or meets a field border.
+# If no field boundary was detected, leave the "points" vector empty.
 
 std_msgs/Header header
 
